@@ -1,29 +1,33 @@
-# Next.js + Tailwind CSS Example
+# ☀️ Find The Sun UI ☀️
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This app is built with:
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+-   [https://nextjs.org/](Next.js)
+-   [https://www.mapbox.com/](Mapbox)
+-   [https://tailwindcss.com/](TailwindCSS)
+-   [https://www.typescriptlang.org/](Typescript)
 
-## Preview
+### 🚧 Installation Locally
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+1. Make sure you have Node installed on your system
+2. Clone this repository
+3. `npm install` or `yarn i`
+4. `npm run dev` or `yarn dev`
+5. Open a web browser to http://localhost:3000
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+### ⚙️ Deployment to Vercel
 
-## Deploy your own
+This app is deployed with [https://vercel.com/](Vercel). You can fork this repo and add your fork'd repo to your own Vercel config to automatically deploy on pushing changes to the repository.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+### Considerations
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+Some of the Mapbox stuff really cut into my time here, so I limited the scope of features to make sure I stayed within an 8-hour window.
 
-## How to use
+Some changes I would make given more time:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+-   Separate out the `Home` component into a few smaller components to clean up the HTML a bit
+-   Have a cleaner-looking error screen that's more descriptive
+-   Ensure that the Sun can't be marked off the map (can control this with map zoom levels and some more testing to see thresholds properly)
+-   Add some fancier animation especially to showing the map result
+-   Make the maps dynamic instead of static images
+-   Not commit my Mapbox API key into the repo (this is a toy example and I can kill the token after showing this off)

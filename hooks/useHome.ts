@@ -28,7 +28,6 @@ export const useHome = () => {
             `https://api.mapbox.com/geocoding/v5/mapbox.places/${searchText}.json?access_token=pk.eyJ1Ijoic2VzZ29lIiwiYSI6ImNrdGRzNzV4bzJpb3EyeW84bjV6d2N2dDcifQ.-yf9uAguvXbOk5pgy_0b7g`
         );
         const response: GeocodingResponse = await result.json();
-        console.log(response);
         setSearchResults(response.features);
     };
 

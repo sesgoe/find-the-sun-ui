@@ -27,7 +27,7 @@ export const useCurrentLocation = () => {
     }, [enabled]);
 
     const getClosestSunnyCity = async (lat: number, lon: number): Promise<ClosestCityResponse> => {
-        const request = await axios.post(`http://138.197.224.17/closest-sunny-city`, { lat, lon });
+        const request = await axios.post(`/api/city`, { lat, lon });
         return request.data;
     };
 
